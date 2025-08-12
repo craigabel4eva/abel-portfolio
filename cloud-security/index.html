@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abel Soyoye — Cloud Security Engineer</title>
+  <meta name="description" content="Portfolio of Abel Soyoye — Cloud Security Engineer specializing in AWS and Azure security, IAM, encryption, and compliance." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121934; --muted:#9fb3c8; --text:#e9f0fb; --accent:#4fd1c5;
+      --ring:#6ee7e7; --chip:#1c254a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1020,#0e1430);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#23315e,#172044);display:grid;place-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);}
+    .avatar span{font-weight:800;letter-spacing:.5px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#0a0f1f;padding:10px 14px;border-radius:12px;font-weight:700;border:0;cursor:pointer}
+    .btn.alt{background:transparent;border:1px solid #2a386d;color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;margin-top:18px}
+    .card{background:linear-gradient(180deg,#11183b,#0f1636);border:1px solid #1c2653;border-radius:20px;padding:22px;
+      box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .tagline{font-size:15px;color:var(--muted)}
+    h1{margin:6px 0 10px 0;font-size:34px;line-height:1.2}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid #273469;color:#cfe5ff;padding:6px 10px;border-radius:999px;font-size:12px}
+    section{margin-top:28px}
+    h2{font-size:20px;margin:0 0 14px 0;color:#dbeafe}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .li{padding:8px 10px;border-radius:12px;background:#0c1432;border:1px solid #1a2859;color:#c9d9f4;font-size:14px}
+    .xp{display:grid;grid-template-columns:1fr;gap:14px}
+    .xp-item{padding:14px;border-radius:16px;background:#0c1432;border:1px solid #1a2859}
+    .xp-item h3{margin:0 0 4px 0;font-size:16px}
+    .xp-item .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .proj .p{padding:14px;border-radius:16px;background:#0c1432;border:1px solid #1a2859}
+    .p h4{margin:0 0 6px 0}
+    footer{margin:30px 0 10px 0;color:var(--muted);font-size:14px;text-align:center}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .proj{grid-template-columns:1fr}
+      .skill-grid{grid-template-columns:1fr}
+    }
+  
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .video-card{display:block;text-decoration:none;color:inherit}
+    .video-card .thumb{position:relative;border-radius:16px;overflow:hidden;border:1px solid #1a275a;background:#0b1330}
+    .video-card img{display:block;width:100%;height:auto}
+    .video-card .play{position:absolute;inset:0;display:grid;place-items:center;opacity:.9}
+    .video-card .play::before{
+      content:"";width:64px;height:64px;border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(2px);
+      box-shadow:0 6px 20px rgba(0,0,0,.35);
+    }
+    .video-card .play::after{
+      content:"";position:absolute;border-left:18px solid white;border-top:12px solid transparent;border-bottom:12px solid transparent;
+      margin-left:6px;
+    }
+    .video-card:hover .thumb{transform:translateY(-1px);transition:transform .15s ease}
+    .video-card .caption{margin-top:8px;font-size:14px;color:#cfe5ff}
+    @media(max-width:900px){.video-grid{grid-template-columns:1fr}}
+    
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .video-card{display:block;text-decoration:none;color:inherit}
+    .video-card .thumb{position:relative;border-radius:16px;overflow:hidden;border:1px solid #1a275a;background:#0b1330}
+    .video-card img{display:block;width:100%;height:auto}
+    .video-card .play{position:absolute;inset:0;display:grid;place-items:center;opacity:.9}
+    .video-card .play::before{
+      content:"";width:64px;height:64px;border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(2px);
+      box-shadow:0 6px 20px rgba(0,0,0,.35);
+    }
+    .video-card .play::after{
+      content:"";position:absolute;border-left:18px solid white;border-top:12px solid transparent;border-bottom:12px solid transparent;
+      margin-left:6px;
+    }
+    .video-card:hover .thumb{transform:translateY(-1px);transition:transform .15s ease}
+    .video-card .caption{margin-top:8px;font-size:14px;color:#cfe5ff}
+    @media(max-width:900px){.video-grid{grid-template-columns:1fr}}
+    </style>
+
+<style>
+.video-thumb {position:relative;display:inline-block;overflow:hidden;border-radius:12px;}
+.video-thumb img {display:block;width:100%;height:auto;border-radius:12px;}
+.play-icon {
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:60px;height:60px;background:rgba(0,0,0,0.6);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+}
+.play-icon:before {
+    content:'';display:block;
+    border-style:solid;border-width:12px 0 12px 20px;
+    border-color:transparent transparent transparent white;
+    margin-left:5px;
+}
+.video-title {margin-top:8px;font-size:14px;color:#cfe5ff;text-align:center;}
+</style>
+
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand">
+        <div class="avatar" style="background:none;padding:0;"><img src="../assets/profile-pix-1-300x300.jpg" alt="Abel Soyoye" style="width:48px;height:48px;border-radius:12px;object-fit:cover;"/></div>
+        <div>
+          <div style="font-weight:800">Abel Soyoye</div>
+          <div class="tagline">Cloud Security Engineer</div>
+        </div>
+      </div>
+      <div class="cta"><a href="https://github.com/craigabel4eva" target="_blank" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:24px;height:24px;filter:invert(1);"></a><a href="https://www.linkedin.com/in/abel-soyoye/" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:24px;height:24px;filter:invert(1);"></a>
+        <a class="btn" href="mailto:craigabel4eva@gmail.com">Contact Me</a>
+        <a class="btn alt" href="#">Download Resume</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Securing cloud at scale.<br/>AWS & Azure focused.</h1>
+        <p class="tagline">
+          Katy, TX • <a href="mailto:craigabel4eva@gmail.com">craigabel4eva@gmail.com</a> • (443) 210‑5693
+        </p>
+        <div class="chips" aria-label="highlights">
+          <span class="chip">CSPM (Security Hub)</span>
+          <span class="chip">GuardDuty / Sentinel</span>
+          <span class="chip">Zero Trust</span>
+          <span class="chip">IAM & Okta SSO</span>
+          <span class="chip">HIPAA • SOC 2</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Certifications</h2>
+        <div class="skill-grid">
+          <div class="li">AWS Security – Specialty</div>
+          <div class="li">AWS Solutions Architect – Assoc</div>
+          <div class="li">AWS SysOps – Assoc</div>
+          <div class="li">AWS Cloud Practitioner</div>
+          <div class="li">Azure Security Engineer</div>
+          <div class="li">Azure Fundamentals</div>
+          <div class="li">CompTIA SecurityX</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        Accomplished Cloud Security Engineer with 9+ years in IT and 5+ years securing AWS and Azure environments.
+        I design and operationalize zero‑trust architectures, harden identity with IAM and Okta SSO/MFA, and implement
+        encryption and monitoring that meet HIPAA and SOC 2 requirements. I collaborate with engineering to reduce risk
+        without slowing delivery.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Key Skills</h2>
+        <div class="skill-grid">
+          <div class="li">AWS: IAM, KMS, GuardDuty, CloudTrail, Security Hub</div>
+          <div class="li">Azure: Defender, Sentinel, Key Vault</div>
+          <div class="li">Network: VPC, WAF, segmentation</div>
+          <div class="li">Data: TLS, at‑rest encryption, DLP</div>
+          <div class="li">SIEM: Sentinel, Splunk</div>
+          <div class="li">Compliance: HIPAA, SOC 2, GDPR</div>
+          <div class="li">Infra Sec: Terraform, SSM, automation</div>
+          <div class="li">IR: playbooks, forensics</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Projects</h2>
+        <div class="proj">
+          <div class="p">
+            <h4>Multi‑Account CSPM</h4>
+            <p>Deployed Security Hub + GuardDuty with auto‑remediation across org; reduced misconfigurations by 45%.</p>
+          </div>
+          <div class="p">
+            <h4>HIPAA‑Compliant EKS</h4>
+            <p>Hardened clusters with encryption, IAM boundaries, WAF; implemented secure CI/CD gates.</p>
+          </div>
+          <div class="p">
+            <h4>IR Automation</h4>
+            <p>Lambda workflows quarantine resources, alert teams, and capture evidence for audits.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Education</h2>
+        <div class="li">M.Sc., Cloud Computing Systems — UMGC, 2024</div>
+        <div class="li">B.Sc., Cooperative & Business Management — OOU, 2009</div>
+        <div class="li">Diploma in Law — OOU, 2004</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Experience</h2>
+      <div class="xp">
+        <div class="xp-item">
+          <h3>Cloud Security Engineer — ClearData</h3>
+          <div class="meta">Aug 2021 – Present • Austin, TX</div>
+          <ul>
+            <li>Implemented org‑wide CSPM (Security Hub), integrated GuardDuty, Config, IAM Access Analyzer.</li>
+            <li>Built automated remediation for misconfigurations across multi‑account AWS.</li>
+            <li>Authored HIPAA‑aligned security controls for EC2 workloads and pipelines.</li>
+            <li>Integrated Okta SSO/MFA for identity hardening and least privilege enforcement.</li>
+            <li>Led incident response planning and tabletop exercises.</li>
+          </ul>
+        </div>
+        <div class="xp-item">
+          <h3>Cloud Security Architect — Vector Solutions</h3>
+          <div class="meta">Dec 2018 – Aug 2021 • Tampa, FL</div>
+          <ul>
+            <li>Established IAM, encryption, and network security standards for AWS workloads.</li>
+            <li>Ran daily security assessments; embedded controls into CI/CD.</li>
+            <li>Responded to cloud threats using GuardDuty and CloudTrail analytics.</li>
+          </ul>
+        </div>
+        <div class="xp-item">
+          <h3>Cloud Operations Engineer — D‑Tech Solutions</h3>
+          <div class="meta">Jul 2015 – Dec 2018 • Washington, DC</div>
+          <ul>
+            <li>Provisioned secure infrastructure with Terraform; enforced encryption for S3/RDS.</li>
+            <li>Implemented SSM patching and centralized monitoring (CloudWatch/CloudTrail).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Abel Soyoye • <a href="mailto:craigabel4eva@gmail.com">Email</a> • Katy, TX
+    
+
+<section class="card">
+  <h2>Videos</h2>
+  <div class="video-grid">
+    
+        <a class="video-card" href="https://www.youtube.com/watch?v=n8HUXXI_eWU&t=168s&pp=ygUYZTRDbG91ZFNvbHV0aW9uVHV0b3JpYWxz0gcJCa0JAYcqIYzv" target="_blank" rel="noopener">
+          <div class="thumb">
+            <img src="https://img.youtube.com/vi/n8HUXXI_eWU/0.jpg" alt="Master AWS Client VPN with Okta SSO - "Secure Access for Your Cloud Resources"">
+            <div class="play" aria-hidden="true"></div>
+          </div>
+          <div class="caption">Master AWS Client VPN with Okta SSO — "Secure Access for Your Cloud Resources"</div>
+        </a>
+        
+        <a class="video-card" href="https://www.youtube.com/watch?v=OzazfZXmQEk&t=29s&pp=ygUYZTRDbG91ZFNvbHV0aW9uVHV0b3JpYWxz" target="_blank" rel="noopener">
+          <div class="thumb">
+            <img src="https://img.youtube.com/vi/OzazfZXmQEk/0.jpg" alt="OpenVPN Made Easy: Seamless AWS Private Subnet & RDS Access">
+            <div class="play" aria-hidden="true"></div>
+          </div>
+          <div class="caption">OpenVPN Made Easy: Seamless AWS Private Subnet & RDS Access</div>
+        </a>
+        
+  </div>
+</section>
+</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
